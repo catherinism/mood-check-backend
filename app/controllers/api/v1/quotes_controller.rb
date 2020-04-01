@@ -1,5 +1,7 @@
 class Api::V1::QuotesController < ApplicationController
 
+    before_action :set_mood
+
     def index
         @quotes = Quote.all
         render json: @quotes
@@ -12,6 +14,10 @@ class Api::V1::QuotesController < ApplicationController
 
     def create
         @quote = Quote.new(quote_params)
+    end
+
+    def set_mood
+        @mood = Mood.find(params[:mood_id])
     end
 
     private
