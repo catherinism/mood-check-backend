@@ -1,5 +1,5 @@
 class MoodSerializer < ActiveModel::Serializer
-  attributes :id, :feeling, :url
+  attributes :id, :feeling, :date, :weather, :note, :url
 
-  has_many :quotes
+  has_many :happenings
 end
