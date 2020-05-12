@@ -1,3 +1,3 @@
 class Mood < ApplicationRecord
-    has_many :quotes
+    has_many :happenings
 end
