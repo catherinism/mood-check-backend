@@ -12,16 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2020_03_25_215625) do
 
-  create_table "moods", force: :cascade do |t|
-    t.string "feeling"
-    t.string "url"
+  create_table "happenings", force: :cascade do |t|
+    t.string "name"
+    t.integer "mood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "quotes", force: :cascade do |t|
-    t.string "phrase"
-    t.integer "mood_id"
+  create_table "moods", force: :cascade do |t|
+    t.string "feeling"
+    t.string "date"
+    t.string "weather"
+    t.string "note"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
