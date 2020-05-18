@@ -1,0 +1,12 @@
+Mood
+has_many :happenings
+
+feeling string
+
+Happening
+belongs_to :mood
+
+name string 
+
+*to check
+=== error
